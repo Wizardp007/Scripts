@@ -1,7 +1,7 @@
 /**
 鲨鱼记账VIP
 #鲨鱼记账
-^https://api.shayujizhang.com/account/grant/detail/info url script_response_url https://raw.githubusercontent.com/Wizardp007/Scripts/main/QuantumultX/jss/shayujizhang.js
+^https://api.shayujizhang.com/account/grant/detail/info url script-response-url https://raw.githubusercontent.com/Wizardp007/Scripts/main/QuantumultX/jss/shayujizhang.js
 hostname=api.shayujizhang.com
 */
 
