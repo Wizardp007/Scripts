@@ -27,13 +27,13 @@ Wizardp007 对任何脚本问题概不负责，包括但不限于由任何脚本
 
 #### 全局配置
 
-[WizarpQX.conf](https://raw.githubusercontent.com/Wizardp007/Scripts/main/Quantumult%20X/WizarpQX.conf) 包括分流规则，重写规则，以及一些常用定时签到任务
+[WizarpQX.conf](https://raw.githubusercontent.com/Wizardp007/Scripts/main/QuantumultX/WizarpQX.conf) 包括分流规则，重写规则，以及一些常用定时签到任务
 
 ####  备份脚本，来自nzw9314
 
-* [Js.conf](https://raw.githubusercontent.com/Wizardp007/Scripts/main/Quantumult%20X/Js.conf) 脚本远程订阅
+* [Js.conf](https://raw.githubusercontent.com/Wizardp007/Scripts/main/QuantumultX/Js.conf) 脚本远程订阅
 
-* [Get_Cookie_Remote.conf](https://raw.githubusercontent.com/Wizardp007/Scripts/main/Quantumult%20X/Get_Cookie_Remote.conf) 获取Cookie远程订阅,仅在Cookie获取或失效时启用,不需要时右滑动禁用.
+* [Get_Cookie_Remote.conf](https://raw.githubusercontent.com/Wizardp007/Scripts/main/QuantumultX/Get_Cookie_Remote.conf) 获取Cookie远程订阅,仅在Cookie获取或失效时启用,不需要时右滑动禁用.
 
-* [Task_Remote.conf](https://raw.githubusercontent.com/Wizardp007/Scripts/main/Quantumult%20X/Task_Remote.conf) 定时任务远程配置,目前无法订阅,请手动根据个人需求复制内容及修改时间
+* [Task_Remote.conf](https://raw.githubusercontent.com/Wizardp007/Scripts/main/QuantumultX/Task_Remote.conf) 定时任务远程配置,目前无法订阅,请手动根据个人需求复制内容及修改时间
 
