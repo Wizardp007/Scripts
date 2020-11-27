@@ -1,5 +1,8 @@
 /*
 石墨文档解锁VIP
+#石墨文档
+^https?://shimo.im/lizard-api/users/ url script-response-body https://raw.githubusercontent.com/Wizardp007/Scripts/main/QuantumultX/jss/shimo.js
+hostname=shimo.im
 */
 
 let obj = JSON.parse($response.body);

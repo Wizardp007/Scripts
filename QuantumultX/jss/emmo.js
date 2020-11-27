@@ -1,5 +1,7 @@
 /*
 EMMO 解锁VIP
+^http://106.54.2.168/emmoDiary/user/getUser url script-response-body https://raw.githubusercontent.com/Wizardp007/Scripts/main/QuantumultX/jss/emmo.js
+hostname = 106.54.2.168
 */
 
 var body = $response.body;

@@ -1,5 +1,5 @@
 # Scripts
-Scripts for Quantumult X ，Loon
+Scripts for Quantumult X ，Loon（未完成）
 
 # 特别声明:
 本仓库发布的Scripts项目中涉及的任何解锁和解密分析脚本，仅用于测试和学习研究，禁止用于商业用途，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断.
@@ -37,3 +37,6 @@ Wizardp007 对任何脚本问题概不负责，包括但不限于由任何脚本
 
 * [Task_Remote.conf](https://raw.githubusercontent.com/Wizardp007/Scripts/main/QuantumultX/Task_Remote.conf) 定时任务远程配置,目前无法订阅,请手动根据个人需求复制内容及修改时间
 
+
+
+####  进阶小佬 ，等待我的其他脚本吧，以后可能也会写Dorajs。

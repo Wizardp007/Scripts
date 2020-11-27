@@ -1,7 +1,8 @@
 /**
 鲨鱼记账VIP
-^https://api.shayujizhang.com/account/grant/detail/info url script_response_url shayujizhang.js
-api.shayujizhang.com
+#鲨鱼记账
+^https://api.shayujizhang.com/account/grant/detail/info url script_response_url https://raw.githubusercontent.com/Wizardp007/Scripts/main/QuantumultX/jss/shayujizhang.js
+hostname=api.shayujizhang.com
 */
 
 var body = $response.body;
