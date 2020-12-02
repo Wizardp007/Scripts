@@ -1,5 +1,5 @@
 /**
-Noto笔记VIP
+Noto笔记VIP （未完成）
 ^https://api.revenuecat.com/v1/subscribers/$RCAnonymousID:5958c79bfcf04c55b0561eb7d608328e url script-response-body https://raw.githubusercontent.com/Wizardp007/Scripts/main/QuantumultX/jss/Notobiji.js
 api.revenuecat.com
 */
