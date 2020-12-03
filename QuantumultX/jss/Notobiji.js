@@ -26,7 +26,7 @@ var url  = $request.url;
     
             },
             "original_app_user_id":"$RCAnonymousID:5958c79bfcf04c55b0561eb7d608328e",
-            "original_application_version":"122",
+            "original_application_version":"1.0",
             "original_purchase_date":"2020-05-15T01:56:58Z",
             "other_purchases":{
     
@@ -36,7 +36,7 @@ var url  = $request.url;
                     "billing_issues_detected_at":null,
                     "expires_date":"2021-12-05T06:15:03Z",
                     "grace_period_expires_date":null,
-                    "is_sandbox":false,
+                    "is_sandbox":true,
                     "original_purchase_date":"2020-12-02T06:15:04Z",
                     "period_type":"Normal",
                     "purchase_date":"2020-12-02T06:15:03Z",
