@@ -41,9 +41,9 @@ Wizardp007 对任何脚本问题概不负责，包括但不限于由任何脚本
 
 ##### 备份脚本，来自 Tartarus2014  [github](https://github.com/Tartarus2014/ )
 
-- [Script.conf](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Script.conf) 脚本远程订阅
-- [Cookie.conf](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Cookie.conf) 获取Cookie远程订阅
-- [Task.conf](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Task.conf) 定时任务远程订阅
+- [Script.conf](https://raw.githubusercontent.com/Wizardp007/Scripts/blob/main/Loon/Script.conf) 脚本远程订阅
+- [Cookie.conf](https://raw.githubusercontent.com/Wizardp007/Scripts/blob/main/Loon/Cookie.conf) 获取Cookie远程订阅
+- [Task.conf](https://raw.githubusercontent.com/Wizardp007/Scripts/blob/main/Loon/Task.conf) 定时任务远程订阅
 
 #### Shadowrocket 全局配置
 
