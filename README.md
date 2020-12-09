@@ -1,5 +1,5 @@
 # Scripts
-Scripts for Quantumult X ，Loon（未完成）
+Scripts for Quantumult X ，Loon，Shadowrocket 
 
 # 特别声明:
 本仓库发布的Scripts项目中涉及的任何解锁和解密分析脚本，仅用于测试和学习研究，禁止用于商业用途，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断.
@@ -25,17 +25,31 @@ Wizardp007 对任何脚本问题概不负责，包括但不限于由任何脚本
 
 
 
-#### 全局配置
+#### Quantumult X全局配置
 
 [WizarpQX.conf](https://raw.githubusercontent.com/Wizardp007/Scripts/main/QuantumultX/WizarpQX.conf) 包括分流规则，重写规则，以及一些常用定时签到任务
 
-####  备份脚本，来自nzw9314
+#####  备份脚本，来自nzw9314
 
 * [Js.conf](https://raw.githubusercontent.com/Wizardp007/Scripts/main/QuantumultX/Js.conf) 脚本远程订阅
 
 * [Get_Cookie_Remote.conf](https://raw.githubusercontent.com/Wizardp007/Scripts/main/QuantumultX/Get_Cookie_Remote.conf) 获取Cookie远程订阅,仅在Cookie获取或失效时启用,不需要时右滑动禁用.
 
 * [Task_Remote.conf](https://raw.githubusercontent.com/Wizardp007/Scripts/main/QuantumultX/Task_Remote.conf) 定时任务远程配置,目前无法订阅,请手动根据个人需求复制内容及修改时间
+
+#### Loon 全局配置
+
+##### 备份脚本，来自 Tartarus2014  [github](https://github.com/Tartarus2014/ )
+
+- [Script.conf](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Script.conf) 脚本远程订阅
+- [Cookie.conf](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Cookie.conf) 获取Cookie远程订阅
+- [Task.conf](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Task.conf) 定时任务远程订阅
+
+#### Shadowrocket 全局配置
+
+##### 备份脚本，来自 Tartarus2014  [github](https://github.com/Tartarus2014/ )
+
+* [Shadowrocket.conf]()
 
 
 
