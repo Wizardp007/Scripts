@@ -49,8 +49,8 @@ Wizardp007 对任何脚本问题概不负责，包括但不限于由任何脚本
 
 ##### 备份脚本，来自 Tartarus2014  [github](https://github.com/Tartarus2014/ )
 
-* [Shadowrocket.conf]()
+* [Shadowrocket.conf](https://raw.githubusercontent.com/Wizardp007/Scripts/main/shadowrocket/Shadowrocket.conf)
 
 
 
-####  进阶小佬 ，等待我的其他脚本吧，以后可能也会写Dorajs。
+####  进阶小佬，自用脚本，会更新和维护，如果失效了我没有发现，也可以发邮件或提issues告诉我，等待我的其他脚本吧，以后可能也会写Dorajs。
