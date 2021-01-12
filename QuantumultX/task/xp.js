@@ -3,7 +3,8 @@
 tgchannel：https://t.me/ZhiYi_Script
 github：https://github.com/ZhiYi-N/script
 boxjs：https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/ZhiYi-N.boxjs.json
-转载留个名字，谢谢
+转自:ZhiYi-N   自用
+
 邀请码：
 来笑谱，一起领20元现金！￥10.c3Zdady#*H^7
 1.长按【复制】整条信息
