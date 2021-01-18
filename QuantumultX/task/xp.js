@@ -5,12 +5,6 @@ github：https://github.com/ZhiYi-N/script
 boxjs：https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/ZhiYi-N.boxjs.json
 转自:ZhiYi-N   自用
 
-邀请码：
-来笑谱，一起领20元现金！￥10.c3Zdady#*H^7
-1.长按【复制】整条信息
-2.下载并打开笑谱App：http://jzi7.cn/7szkKX 
-谢谢
-作者：执意ZhiYi-N
 目前只有看视频，群友推荐，欢迎推荐
 脚本初成，非专业人士制作，欢迎指正
 #看一个视频弹出金币获取videoheader and videobody(存在一定几率获取不到videobody）多试几次 and 金蛋获取 gold body(第六个视频，最后一圈）
