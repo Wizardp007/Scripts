@@ -8,7 +8,5 @@ QX & Q & Surge Mitm = ap*.intsig.net,
 */
 
 let obj = JSON.parse($response.body);
-		obj.data.psnl_vip_property.psnl_vip_property.auto_renewal = true
-		obj.data.psnl_vip_property.psnl_vip_property.nxt_renew_tm = "1738425600"
-		obj.data.psnl_vip_property.psnl_vip_property.expiry = "1738425600"
+	obj.data.psnl_vip_property.psnl_vip_property.expiry = "1738425600"
 $done({body: JSON.stringify(obj)});
