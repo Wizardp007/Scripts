@@ -20,7 +20,7 @@ const myRequest = {
 $task.fetch(myRequest).then(response => {
     // response.statusCode, response.headers, response.body
       console.log(response.body);
-      const result = JSON.parse(data)
+      const result = JSON.parse(response.body)
       const title = '${cookieName}'
       let subTitle = ``
       let detail = ``
@@ -35,7 +35,7 @@ $task.fetch(myRequest).then(response => {
     $done();
 }, reason => {
     // reason.error
-    $notify("${cookieName}", "携程签到异常", reason.error); // Error!
+    $notify('${cookieName}', "携程签到异常", reason.error); // Error!
     $done();
 });
 
