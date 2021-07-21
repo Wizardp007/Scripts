@@ -3,7 +3,7 @@ const cookieKey = 'cookie_ctrip'
 const bodyReqKey = 'body_head_ctrip'
 const chen = init()
 const cookieVal = $request.headers['Cookie']
-const headBodyVal = $request.body
+const headBodyVal = JSON.stringify($request.body)
 
 if (cookieVal) {
   if (chen.setdata(cookieVal, cookieKey)) {

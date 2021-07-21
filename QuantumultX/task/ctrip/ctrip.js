@@ -8,7 +8,7 @@ let bodyVal   = chen.getdata(bodyReqKey)
 sign()
 
 function sign() {
-    let url = {url: 'https://m.ctrip.com/restapi/soa2/21778/json/findUserSignInfo',headers: { Cookie:cookieVal},body:bodyVal}
+    let url = {url: 'https://m.ctrip.com/restapi/soa2/21778/json/findUserSignInfo',headers: { Cookie:cookieVal},body:JSON.parse(bodyVal)}
     url.headers['Accept'] = 'application/json'
     url.headers['Accept-Encoding'] = 'gzip, deflate, br'
     url.headers['Accept-Language'] = 'zh-cn'
