@@ -38,24 +38,32 @@ function sign() {
     url.body = bodys
 
     chen.post(url, (error, response, data) => {
-      const result = JSON.parse(data)
-      const title = `${cookieName}`
-      let subTitle = ``
-      let detail = ``
-
-      if (result.resultcode == 0){
-        subTitle = '携程签到成功√'
-        detail = '连续签到${result.signCount}天，当前积分${result.integrated}'
-      } else {
-        subTitle = '携程签到失败×'
-        detail = `说明: ${result.resultmessage}`
-      }
-
-      chen.msg(title, subTitle, detail)
-
+        try{
+         if(error){
+             subTitle = '携程签到失败√'
+             detail = '发生了异常'
+          }else{
+              const result = JSON.parse(data)
+              const title = '${cookieName}'
+              let subTitle = ``
+              let detail = ``
+               if (result.resultcode == 0){
+                      subTitle = '携程签到成功√'
+                      detail = '连续签到${result.signCount}天，当前积分${result.integrated}'
+                } else {
+                  subTitle = '携程签到失败×'
+                  detail = `说明: ${result.resultmessage}`
+                }
+              chen.msg(title, subTitle, detail)
+          }
+        }catch((err) => {
+            chen.log(err)
+            chen.msg('${cookieName}', 'error: ',err)
+        })finally{
+            chen.done()
+        }
     })
-      chen.done()
-    }
+ }
 
   function init() {
     isSurge = () => {
