@@ -26,10 +26,10 @@ $task.fetch(myRequest).then(response => {
       let detail = ``
        if (result.resultcode == 0){
           subTitle = '携程签到成功√'
-          detail = '连续签到${result.signCount}天，当前积分${result.integrated}'
+          detail = '连续签到'+result.signCount+'天'+'，当前积分'+result.integrated
         } else {
           subTitle = '携程签到失败×'
-          detail = `说明: ${result.resultmessage}`
+          detail = '说明:'+result.resultmessage
         }
     $notify(title, subTitle, detail); // Success!
     $done();
