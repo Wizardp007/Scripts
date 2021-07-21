@@ -4,31 +4,57 @@ const chen = init()
 let cookieVal = chen.getdata(cookieKey)
 sign()
 function sign() {
-    let url = {url: 'https://m.ctrip.com/restapi/soa2/21778/json/saveDailyBonus?',headers: { Cookie:cookieVal}}
+
+    let url = {url: 'https://m.ctrip.com/restapi/soa2/21778/json/findUserSignInfo',headers: { Cookie:cookieVal},body:{}}
+    url.headers['Accept'] = 'application/json'
+    url.headers['Accept-Encoding'] = 'gzip, deflate, br'
+    url.headers['Accept-Language'] = 'zh-cn'
+    url.headers['Connection'] = 'keep-alive'
+    url.headers['Content-Length'] = '251'
+    url.headers['Content-Type'] = 'application/json'
+    url.headers['Host'] = 'm.ctrip.com'
     url.headers['Origin'] = 'https://m.ctrip.com'
-    url.headers['Connection'] = `keep-alive`
-    url.headers['Content-Type'] = `application/json`
-    url.headers['Accept'] = `application/json`
-    url.headers['Host'] = `m.ctrip.com`
-    url.headers['User-Agent'] = `Mozilla/5.0 (iPhone; CPU iPhone OS 13_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 mediaCode=SFEXPRESSAPP-iOS-ML`
-    url.headers['Accept-Language'] = `zh-cn`
-    url.headers['Accept-Encoding'] = `gzip, deflate, br`
-    url.headers['https://m.ctrip.com/webapp/membercenter/task?isHideNavBar=YES&from_native_page=1']
-    chen.get(url, (error, response, data) => {
+    url.headers['Referer'] = 'https://m.ctrip.com/webapp/membercenter/task?isHideNavBar=YES&from_native_page=1'
+    url.headers['User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/18F72_eb64__Ctrip_CtripWireless_8.38.2_cDevice=iPhone 8 Plus__cSize=w414*h736__cwk=1_'
+    url.headers['X-Requested-With'] = 'XMLHttpRequest'
+    let bodys = {
+        "head":{
+                "cid":"12001072410256556930",
+                "ctok":"",
+                "cver":"838.002",
+                "lang":"01",
+                "sid":"8890",
+                "syscode":"12",
+                "auth":"DE89A79E6F23B474A39D2749D78DBF6FE22F49ADE28C96C37723399CDC4830B7",
+                "extension":[
+                    {
+                    "name":"protocal",
+                    "value":"https"
+                    }
+                ]
+            },
+        "contentType":"json"
+    }
+    url.body = bodys
+
+    chen.post(url, (error, response, data) => {
       const result = JSON.parse(data)
       const title = `${cookieName}`
       let subTitle = ``
       let detail = ``
-    
+
       if (result.resultcode == 0){
-        subTitle = `签到结果: 成功,总积分${result.integrated}；下次可获得${result.nextIntegrated}`
+        subTitle = '携程签到成功√'
+        detail = '连续签到${result.signCount}天，当前积分${result.integrated}'
       } else {
-        subTitle = `签到结果: 未知`
+        subTitle = '携程签到失败×'
         detail = `说明: ${result.resultmessage}`
       }
+
       chen.msg(title, subTitle, detail)
+
     })
-    chen.done()
+      chen.done()
     }
 
   function init() {
