@@ -5,19 +5,7 @@ let cookieVal = chen.getdata(cookieKey)
 sign()
 function sign() {
 
-    let url = {url: 'https://m.ctrip.com/restapi/soa2/21778/json/findUserSignInfo',headers: { Cookie:cookieVal},body:{}}
-    url.headers['Accept'] = 'application/json'
-    url.headers['Accept-Encoding'] = 'gzip, deflate, br'
-    url.headers['Accept-Language'] = 'zh-cn'
-    url.headers['Connection'] = 'keep-alive'
-    url.headers['Content-Length'] = '251'
-    url.headers['Content-Type'] = 'application/json'
-    url.headers['Host'] = 'm.ctrip.com'
-    url.headers['Origin'] = 'https://m.ctrip.com'
-    url.headers['Referer'] = 'https://m.ctrip.com/webapp/membercenter/task?isHideNavBar=YES&from_native_page=1'
-    url.headers['User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/18F72_eb64__Ctrip_CtripWireless_8.38.2_cDevice=iPhone 8 Plus__cSize=w414*h736__cwk=1_'
-    url.headers['X-Requested-With'] = 'XMLHttpRequest'
-    let bodys = {
+ let bodys = {
         "head":{
                 "cid":"12001072410256556930",
                 "ctok":"",
@@ -35,6 +23,19 @@ function sign() {
             },
         "contentType":"json"
     }
+    let url = {url: 'https://m.ctrip.com/restapi/soa2/21778/json/findUserSignInfo',headers: { Cookie:cookieVal},body:JSON.stringify(bodys)}
+    url.headers['Accept'] = 'application/json'
+    url.headers['Accept-Encoding'] = 'gzip, deflate, br'
+    url.headers['Accept-Language'] = 'zh-cn'
+    url.headers['Connection'] = 'keep-alive'
+    url.headers['Content-Length'] = '251'
+    url.headers['Content-Type'] = 'application/json'
+    url.headers['Host'] = 'm.ctrip.com'
+    url.headers['Origin'] = 'https://m.ctrip.com'
+    url.headers['Referer'] = 'https://m.ctrip.com/webapp/membercenter/task?isHideNavBar=YES&from_native_page=1'
+    url.headers['User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/18F72_eb64__Ctrip_CtripWireless_8.38.2_cDevice=iPhone 8 Plus__cSize=w414*h736__cwk=1_'
+    url.headers['X-Requested-With'] = 'XMLHttpRequest'
+
     url.body = bodys
 
     chen.post(url, (error, response, data) => {
