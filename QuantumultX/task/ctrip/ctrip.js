@@ -1,29 +1,13 @@
 const cookieName ='携程旅行app签到'
 const cookieKey = 'cookie_ctrip'
+const bodyReqKey = 'body_head_ctrip'
 const chen = init()
 let cookieVal = chen.getdata(cookieKey)
+let bodyVal   = chen.getdata(bodyReqKey)
+
 sign()
 function sign() {
-
- let bodys = {
-        "head":{
-                "cid":"12001072410256556930",
-                "ctok":"",
-                "cver":"838.002",
-                "lang":"01",
-                "sid":"8890",
-                "syscode":"12",
-                "auth":"DE89A79E6F23B474A39D2749D78DBF6FE22F49ADE28C96C37723399CDC4830B7",
-                "extension":[
-                    {
-                    "name":"protocal",
-                    "value":"https"
-                    }
-                ]
-            },
-        "contentType":"json"
-    }
-    let url = {url: 'https://m.ctrip.com/restapi/soa2/21778/json/findUserSignInfo',headers: { Cookie:cookieVal},body:JSON.stringify(bodys)}
+    let url = {url: 'https://m.ctrip.com/restapi/soa2/21778/json/findUserSignInfo',headers: { Cookie:cookieVal},body:bodyVal}
     url.headers['Accept'] = 'application/json'
     url.headers['Accept-Encoding'] = 'gzip, deflate, br'
     url.headers['Accept-Language'] = 'zh-cn'
@@ -35,8 +19,6 @@ function sign() {
     url.headers['Referer'] = 'https://m.ctrip.com/webapp/membercenter/task?isHideNavBar=YES&from_native_page=1'
     url.headers['User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/18F72_eb64__Ctrip_CtripWireless_8.38.2_cDevice=iPhone 8 Plus__cSize=w414*h736__cwk=1_'
     url.headers['X-Requested-With'] = 'XMLHttpRequest'
-
-    url.body = bodys
 
     chen.post(url, (error, response, data) => {
         try{

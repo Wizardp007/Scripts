@@ -10,7 +10,7 @@ m.ctrp.com
 
 [rewrie_local]
 
-^https:\/\/m\.ctrip\.com\/restapi\/soa2\/21778\/json\/userBaseInfo url script-request-header https://raw.githubusercontent.com/barrym-chen/Script/master/ctrip/ctrip_cookie.js
+^https:\/\/m\.ctrip\.com\/restapi\/soa2\/21778\/json\/findUserSignInfo url script-request-header https://raw.githubusercontent.com/barrym-chen/Script/master/ctrip/ctrip_cookie.js
 
 [task_local]
 

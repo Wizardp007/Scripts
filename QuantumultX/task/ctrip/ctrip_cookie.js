@@ -1,12 +1,21 @@
 const cookieName = '携程旅app签到'
 const cookieKey = 'cookie_ctrip'
+const bodyReqKey = 'body_head_ctrip'
 const chen = init()
 const cookieVal = $request.headers['Cookie']
+const headBodyVal = $request.body
+
 if (cookieVal) {
   if (chen.setdata(cookieVal, cookieKey)) {
     chen.msg(`${cookieName}`, '获取Cookie: 成功', '')
     chen.log(`[${cookieName}] 获取Cookie: 成功, cookie: ${cookieVal}`)
   }
+}
+if(headBodyVal){
+    if (chen.setdata(headBodyVal, bodyReqKey)) {
+        chen.msg(`${cookieName}`, '获取body: 成功', '')
+        chen.log(`[${cookieName}] 获取body: 成功, body: ${headBodyVal}`)
+    }
 }
 
 function init() {
