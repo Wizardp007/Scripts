@@ -2,8 +2,8 @@ const cookieName = '携程旅app签到'
 const cookieKey = 'cookie_ctrip'
 const bodyReqKey = 'body_head_ctrip'
 const chen = init()
-const cookieVal = $request.headers['Cookie']
-const headBodyVal = $request.body
+const cookieVal = JSON.stringify($request.headers)
+const headBodyVal = JSON.stringify($request.body)
 
 if (cookieVal) {
   if (chen.setdata(cookieVal, cookieKey)) {

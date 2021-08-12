@@ -5,48 +5,39 @@ const chen = init()
 let cookieVal = chen.getdata(cookieKey)
 let bodyVal   = chen.getdata(bodyReqKey)
 
-sign()
-function sign() {
-    let url = {url: 'https://m.ctrip.com/restapi/soa2/21778/json/findUserSignInfo',headers: { Cookie:cookieVal},body:bodyVal}
-    url.headers['Accept'] = 'application/json'
-    url.headers['Accept-Encoding'] = 'gzip, deflate, br'
-    url.headers['Accept-Language'] = 'zh-cn'
-    url.headers['Connection'] = 'keep-alive'
-    url.headers['Content-Length'] = '251'
-    url.headers['Content-Type'] = 'application/json'
-    url.headers['Host'] = 'm.ctrip.com'
-    url.headers['Origin'] = 'https://m.ctrip.com'
-    url.headers['Referer'] = 'https://m.ctrip.com/webapp/membercenter/task?isHideNavBar=YES&from_native_page=1'
-    url.headers['User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/18F72_eb64__Ctrip_CtripWireless_8.38.2_cDevice=iPhone 8 Plus__cSize=w414*h736__cwk=1_'
-    url.headers['X-Requested-With'] = 'XMLHttpRequest'
+const url = "https://m.ctrip.com/restapi/soa2/21778/json/findUserSignInfo";
+const method = "POST";
+const headers = JSON.parse(cookieVal);
+const data = JSON.parse(bodyVal);
 
-    chen.post(url, (error, response, data) => {
-        try{
-         if(error){
-             subTitle = '携程签到失败√'
-             detail = '发生了异常'
-          }else{
-              const result = JSON.parse(data)
-              const title = '${cookieName}'
-              let subTitle = ``
-              let detail = ``
-               if (result.resultcode == 0){
-                      subTitle = '携程签到成功√'
-                      detail = '连续签到${result.signCount}天，当前积分${result.integrated}'
-                } else {
-                  subTitle = '携程签到失败×'
-                  detail = `说明: ${result.resultmessage}`
-                }
-              chen.msg(title, subTitle, detail)
-          }
-        }catch((err) => {
-            chen.log(err)
-            chen.msg('${cookieName}', 'error: ',err)
-        })finally{
-            chen.done()
+const myRequest = {
+    url: url,
+    method: method, // Optional, default GET.
+    headers: headers, // Optional.
+    body: data // Optional.
+};
+
+$task.fetch(myRequest).then(response => {
+    // response.statusCode, response.headers, response.body
+      console.log(response.body);
+      const result = JSON.parse(response.body)
+      const title = '${cookieName}'
+      let subTitle = ``
+      let detail = ``
+       if (result.resultcode == 0){
+          subTitle = '携程签到成功√'
+          detail = '连续签到'+result.signCount+'天'+'，当前积分'+result.integrated
+        } else {
+          subTitle = '携程签到失败×'
+          detail = '说明:'+result.resultmessage
         }
-    })
- }
+    $notify(title, subTitle, detail); // Success!
+    $done();
+}, reason => {
+    // reason.error
+    $notify('${cookieName}', "携程签到异常", reason.error); // Error!
+    $done();
+});
 
   function init() {
     isSurge = () => {
