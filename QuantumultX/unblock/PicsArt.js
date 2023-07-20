@@ -21,6 +21,10 @@ hostname = api.picsart.c*, api.meiease.c*
 
 **************************/
 
-let obj = JSON.parse($response.body);
-obj.subscription.granted = "true";
-$done({body: JSON.stringify(obj)});
+//let obj = JSON.parse($response.body);
+//obj.subscription.granted = "true";
+//$done({body: JSON.stringify(obj)});
+
+var chxm1023={"warning":"仅供学习","tgchannel":"https://t.me/chxm1023","feedback":"chxm1023","status":"success","reason":"ok","response":{"purchase_date":1645263154000,"expire_date":4092599350000,"app":"com.picsart.editor","subscription_id":"com.picsart.editor.subscription_yearly","order_id":"300001048350229","original_order_id":"600001048350229","status":"SUBSCRIPTION_PURCHASED","is_trial":true,"winback_screen_id":1,"is_eligible_for_introductory":false,"plan_meta":{},"limitation":{"max_count":1000,"limits_exceeded":false},"is_eligible_for_grant":true}}
+
+$done({body: JSON.stringify(chxm1023)});
