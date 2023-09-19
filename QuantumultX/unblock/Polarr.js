@@ -5,7 +5,7 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/api\.polaxiong\.com\/.+\/payments\/(profiles\/.+\/subscription|appleiap\/receipts\/confirmation) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/pola.js
+^https?:\/\/api\.polaxiong\.com\/.+\/payments\/(profiles\/.+\/subscription|appleiap\/receipts\/confirmation) url script-response-body https://raw.githubusercontent.com/Wizardp007/Scripts/main/QuantumultX/unblock/Polarr.js
 
 [mitm]
 hostname = api.polaxiong.com
