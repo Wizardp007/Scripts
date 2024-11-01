@@ -1224,6 +1224,16 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         item.end_date = 3818419199; // Unix 时间戳 2090-12-31 23:59:59
       }
     }
+  }else if(url.includes("/v3/strategy/ad")){
+    //广告策略
+    if(obj?.data?.operation?.length > 0){
+       for (let item of obj.data.operation) {
+         item.begin_time = 1727798399;
+         item.end_time = 1727884799;
+         item.type = "hide";
+         item.adid = "0"; 
+       }
+    }
   }
   $done({ body: JSON.stringify(obj) });
 }
