@@ -16,15 +16,7 @@ if ((url.includes("api-access.pangolin-sdk-toutiao.com/api/ad/union/sdk")
         || url.includes("is.snssdk.com/api/ad/union/sdk"))
     && method === postMethod) {
     console.log('穿山甲-get_ads');
-    if (!body.message) {
-        console.log(`body:${$response.body}`);
-        // 错误码 https://www.csjplatform.com/supportcenter/5421
-        if (!('status_code' in body)) {
-            $notification.post(noticeTitle, "穿山甲", "message/status_code字段错误");
-        } else {
-            console.log('广告为空');
-        }
-    } else {
+    if (body) {
         console.log(Object.keys(body));
         body["status_code"] = 20001;
         body["reason"] = 112;
@@ -36,6 +28,14 @@ if ((url.includes("api-access.pangolin-sdk-toutiao.com/api/ad/union/sdk")
       //      "desc": "该代码位请求量过大且消耗过低，因此填充率控制在10%以内，该策略每日生效，如果当天该代码位的消耗上涨或请求量小于5000，则次日不会命中该策略"
       //  };
         console.log('成功');
+    } else {
+        // console.log(`body:${$response.body}`);
+        // 错误码 https://www.csjplatform.com/supportcenter/5421
+        if (!('status_code' in body)) {
+            $notification.post(noticeTitle, "穿山甲", "message/status_code字段错误");
+        } else {
+            console.log('广告为空');
+        }
     }
 } else if (url.includes('mi.gdt.qq.com') && method === getMethod) {
     console.log('优量汇');
