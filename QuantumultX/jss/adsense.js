@@ -17,6 +17,7 @@ if ((url.includes("api-access.pangolin-sdk-toutiao.com/api/ad/union/sdk")
     && method === postMethod) {
     console.log('穿山甲-get_ads');
     if (body) {
+        console.log(`body:${$response.body}`);
         console.log(Object.keys(body));
         body["status_code"] = 20001;
         body["reason"] = 112;
@@ -29,7 +30,6 @@ if ((url.includes("api-access.pangolin-sdk-toutiao.com/api/ad/union/sdk")
       //  };
         console.log('成功');
     } else {
-        // console.log(`body:${$response.body}`);
         // 错误码 https://www.csjplatform.com/supportcenter/5421
         if (!('status_code' in body)) {
             $notification.post(noticeTitle, "穿山甲", "message/status_code字段错误");
