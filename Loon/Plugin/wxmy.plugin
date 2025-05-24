@@ -1,0 +1,7 @@
+# ✅ 万兴
+[script]
+http-response ^https?:\/\/api\.300624\.com\/v3\/plan\/feature-code\/auth script-path=https://raw.githubusercontent.com/Wizardp007/Scripts/refs/heads/main/QuantumultX/unblock/wanxmy.js, requires-body=true, timeout=60, tag=万xing
+http-response ^https?:\/\/api\.wondershare\.cc\/v3\/plan\/feature-code\/auth script-path=https://raw.githubusercontent.com/Wizardp007/Scripts/refs/heads/main/QuantumultX/unblock/wanxmy.js, requires-body=true, timeout=60, tag=万xingmy
+
+[mitm]
+hostname = api.300624.com,api.wondershare.cc
