@@ -1,5 +1,5 @@
 [Script]
-http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=1,max-size=0, script-path=https://subweb.oss-cn-hongkong.aliyuncs.com/Script/embyPremiere.js, tag=EMBY
+http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice script-path=https://raw.githubusercontent.com/Wizardp007/Scripts/refs/heads/main/QuantumultX/unblock/emby/unlock.js, timeout=10,requires-body = true,tag=EMBY
 
 [MITM]
 hostname = mb3admin.com
