@@ -12,4 +12,4 @@ http-response ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.
 
 [MITM]
 
-hostname = *.xiuxiu.meitu.com,api.posters.meitu.com,api-sub.meitu.com
+hostname = *.xiuxiu.meitu.com,api.posters.meitu.com,api-sub.meitu.com,*.meitu.com
