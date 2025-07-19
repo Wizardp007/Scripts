@@ -12,12 +12,13 @@
 ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js
 
 [mitm]
-hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com
+hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com,*.meitu.com
 
 *************************************/
 
 
 var chxm1023 = JSON.parse($response.body);
+const userdisplay = '/users/show_current.json'
 const hysj = '/vip/prompt/query.json';
 const hyxx = '/vip/vip_show.json';
 const user = '/user/show.json';
@@ -30,6 +31,19 @@ const sjshf = '/home/home.json';
 const kta = 'https://api.posters.meitu.com/center/user_rights.json';
 const ktb = 'https://api.posters.meitu.com/center/user_rights_consume.json';
 
+
+if ($request.url.indexOf(userdisplay) != -1){
+  chxm1023.response.user.vip = {
+                "xiuxiu_vip": 1,
+                "list": [
+                    {
+                        "app_id": 18,
+                        "icon": "https:\/\/account.meitu.com\/static\/image\/svip.png",
+                        "status": 1
+                    }
+                ]
+            }
+}
 
 if ($request.url.indexOf(hysj) != -1){
   chxm1023.data = {
