@@ -8,7 +8,7 @@
 
 [Script]
 
-http-response ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js, requires-body=true, timeout=60 ,tag=mtxx_8
+http-response ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home) script-path=https://raw.githubusercontent.com/Wizardp007/Scripts/refs/heads/main/QuantumultX/unblock/mtxx.js, requires-body=true, timeout=60 ,tag=mtxx_8
 
 [MITM]
 
