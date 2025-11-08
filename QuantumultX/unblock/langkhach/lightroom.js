@@ -1,10 +1,12 @@
 body = $response.body.replace(/while.{7}\n/, "");
 let obj = JSON.parse(body);
 obj.entitlement.status="subscriber";
+obj.entitlement.expired_date="2027-10-18T12:00:00.000000Z"
+obj.entitlement.deletion_date="2027-04-30T05:37:42.156109Z"
 obj.current_subs={
       "product_id": "lightroom",
       "store": "adobe",
-      "purchase_date": "2019-10-10T16:32:10.254954Z",
+      "purchase_date": "2025-10-10T16:32:10.254954Z",
       "sao": {
         "inpkg_CCES": "0",
         "inpkg_CCLE": "1",
